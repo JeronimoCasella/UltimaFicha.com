@@ -1,0 +1,103 @@
+/* =================Google Fonts=================*/
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Poppins:ital,wght@1,400;1,500&display=swap');
+
+
+/* =================Variables CSS=================*/
+:root {
+    --header-height: 3.5rem;
+
+/* =================Colores=================*/
+--first-color: hsl(19, 64%, 54%)
+--first-color-alt: hsl(19, 64%, 52%)
+--tittle-color: hsl(19, 16%, 15%)
+--text-color: hsl(19, 16%, 35%)
+--first-color-light: hsl(19, 8%, 55%)
+--body-color: hsl(19, 100%, 96%)
+--container-color: hsl(19, 100%, 97%)
+
+/* =================font weight=================*/
+--font-medium: 500;
+--font-semi-bold: 600;
+
+/* =================Z index=================*/
+--z-tooltip: 10;
+--z-fixed: 100;
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;  
+  }    
+}
+
+/* =================BASE=================*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var();
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+h1,h2,h3{
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =================Clases de css Reusables=================*/
+.container {
+    max-width: 1024px;
+    margin-inline: 1.5rem;
+}
+
+.grid  {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.section {
+padding-block: 5rem 1rem
+  }
+
+.section__title {
+    font-size: var(--h1-font-size);
+    font-family: var();
+    margin-bottom: 1.5rem;
+}
+
+.section__subtitles{
+    display: block;
+    font-size: var(--h2-font-size);
+    font-family: var();
+    color: var(--first-color);
+    margin-bottom: .5rem;
+}
+
