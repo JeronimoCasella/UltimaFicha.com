@@ -226,14 +226,14 @@ img {
 }
 
 .nav__img-1 {
-  width: 300px;
+  width: 230px;
   top: 2rem;
   left: -2rem;
   transform: rotate(deg);
 }
 
 .nav__img-2 {
-  width: 300px;
+  width: 230px;
   right: -1rem;
   bottom: 0;
   transform: rotate(180deg);
@@ -245,6 +245,9 @@ img {
 }
 
 /* Change background header */
+.bg-header {
+  box-shadow: 0 2px 8px hsla(191, 64%, 24%, 0.3);
+}
 
 /* Active link */
 
@@ -301,7 +304,47 @@ img {
   transition: background 0.3s;
 }
 
+.button i {
+  font-size: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.button:hover {
+  background-color: var(--first-color-alt);
+}
+
+.button:hover i {
+  transform: translateX(0.25rem);
+}
+
 /*=============== ABOUT ===============*/
+.about {
+  position: relative;
+}
+
+.about__container {
+  row-gap: 3rem;
+}
+
+.about__title img {
+  width: 30px;
+}
+
+.about__title div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.about__img {
+  width: 400px;
+  justify-self: center;
+}
+
+.section__subtitle {
+  font-size: 2.5rem;
+}
 
 /*=============== POPULAR ===============*/
 
