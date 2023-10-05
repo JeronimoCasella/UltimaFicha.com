@@ -227,7 +227,6 @@ img {
 
 .nav__img-1 {
   width: 230px;
-  width: 200px;
   top: 2rem;
   left: -2rem;
   transform: rotate(deg);
@@ -235,7 +234,6 @@ img {
 
 .nav__img-2 {
   width: 230px;
-  width: 190px;
   right: -1rem;
   bottom: 0;
   transform: rotate(180deg);
