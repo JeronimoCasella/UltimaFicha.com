@@ -226,14 +226,14 @@ img {
 }
 
 .nav__img-1 {
-  width: 230px;
+  width: 200px;
   top: 2rem;
   left: -2rem;
   transform: rotate(deg);
 }
 
 .nav__img-2 {
-  width: 230px;
+  width: 190px;
   right: -1rem;
   bottom: 0;
   transform: rotate(180deg);
@@ -437,6 +437,56 @@ img {
 }
 
 /*=============== NEWSLETTER ===============*/
+.newsletter__container {
+  position: relative;
+}
+
+.newsletter__content {
+  position: relative;
+  background-color: hsl(191, 24%, 15%);
+  border-radius: 2.5rem;
+  padding: 5rem 1rem 3rem;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.newsletter__img {
+  width: 250px;
+  position: absolute;
+  top: -4.5rem;
+  left: -5rem;
+  transform: rotate(60deg);
+}
+
+.newsletter__data .section__title {
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.newsletter__form {
+  background-color: #fff;
+  padding: 5px 5px 5px 16px;
+  border-radius: 4rem;
+  display: flex;
+  column-gap: 0.5rem;
+}
+
+.newsletter__input,
+.newsletter__button {
+  font-family: var(--body-font);
+  border: none;
+  outline: var(--normal-font-size);
+}
+
+.newsletter__input {
+  width: 90%;
+  color: var(--text-color);
+}
+
+.newsletter__button {
+  cursor: pointer;
+}
 
 /*=============== FOOTER ===============*/
 
