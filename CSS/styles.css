@@ -306,6 +306,7 @@ body.dark-theme {
 .home__container {
   row-gap: 3rem;
   padding-top: 2rem;
+  margin-bottom: 10rem;
 }
 
 .home__img {
@@ -499,7 +500,7 @@ body.dark-theme {
 }
 
 .newsletter__img {
-  width: 235px;
+  width: 220px;
   position: absolute;
   top: -4.5rem;
   left: -5rem;
@@ -516,7 +517,6 @@ body.dark-theme {
   padding: 5px 5px 5px 16px;
   border-radius: 4rem;
   display: flex;
-  column-gap: 0.5rem;
 }
 
 .newsletter__input,
@@ -818,14 +818,16 @@ body.dark-theme {
   .home__title div {
     justify-content: initial;
     column-gap: 1rem;
+    font-size: 7rem;
   }
 
   .home__description {
     padding-inline: 0 10rem;
+    font-size: 1.25rem;
   }
 
   .home__img {
-    width: 550px;
+    width: 650px;
     position: absolute;
     top: 5rem;
     right: -1.5rem;
