@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--=================FAVICON=================-->
+    <link rel="shortcut icon" href="Imagenes\5788416411632316492-128.png" />
+
+    <!--=================REMIXICONS=================-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!--=================CSS=================-->
+    <link rel="stylesheet" href="CSS\styles.css" />
+  </head>
+  <body>
+    <!--=================HEADER=================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">
+          <img src="Imagenes\5788416411632316492-128.png" alt="logo image" />
+          Ultima Ficha
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html #home" class="nav__link">HOME</a>
+            </li>
+          </ul>
+          <!--close button-->
+          <div class="nav__close" id="nav-close">
+            <i class="ri-close-line"></i>
+          </div>
+          <img
+            src="Imagenes\network-lines-3.webp"
+            alt="nav image"
+            class="nav__img-1"
+          />
+          <img
+            src="Imagenes\network-lines-3.webp"
+            alt="nav image"
+            class="nav__img-2"
+          />
+        </div>
+
+        <div class="nav__buttons">
+          <i class="ri-moon-line change-theme" id="theme-button"></i>
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-apps-2-line"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--=================LOGIN=================-->
+    <section class="login__section" id="login__section">
+      <div class="section__container" id="section__container">
+        <div class="form__container sign-up">
+          <form action="" method="post" id="form__registro">
+            <h1>Crear Cuenta</h1>
+            <div class="social__icons">
+              <a href="#" class="Icon"><i class="ri-google-fill"></i></a>
+              <a href="#" class="Icon"><i class="ri-facebook-fill"></i></a>
+              <a href="#" class="Icon"><i class="ri-github-fill"></i></a>
+              <a href="#" class="Icon"><i class="ri-linkedin-fill"></i></a>
+            </div>
+            <span>Tambien puedes usar tu Email</span>
+            <input type="text" placeholder="Nombre" id="nombre__registro" />
+            <input type="email" placeholder="Email" id="email__registro" />
+            <input
+              type="password"
+              placeholder="Contraseña"
+              id="contraseña__registro"
+            />
+            <button type="submit">Registrarse</button>
+            <p class="warnings" id="warnings"></p>
+          </form>
+        </div>
+        <div class="form__container sign-in">
+          <form action="" method="post" id="form__inicio">
+            <h1>Iniciar Sesion</h1>
+            <div class="social__icons">
+              <a href="#" class="Icon"><i class="ri-google-fill"></i></a>
+              <a href="#" class="Icon"><i class="ri-facebook-fill"></i></a>
+              <a href="#" class="Icon"><i class="ri-github-fill"></i></a>
+              <a href="#" class="Icon"><i class="ri-linkedin-fill"></i></a>
+            </div>
+            <span>O usa tu Nombre y Contraseña</span>
+            <input type="text" placeholder="Nombre" id="nombre__inicio" />
+            <input
+              type="password"
+              placeholder="Contraseña"
+              id="contraseña__inicio"
+            />
+            <a href="#">Olvidaste tu Contraseña?</a>
+            <button type="submit">Iniciar Sesion</button>
+            <p class="warnings__inicio" id="warnings__inicio"></p>
+          </form>
+        </div>
+        <div class="toggle__container">
+          <div class="toggle">
+            <div class="toggle__panel toggle__left">
+              <h1>Bienvenido de nuevo</h1>
+              <p>
+                Ingresa tus datos personales para utilizar todas las
+                caracteristicas del sitio
+              </p>
+              <button type="submit" class="hidden" id="login">
+                Iniciar Sesion
+              </button>
+            </div>
+            <div class="toggle__panel toggle__right">
+              <h1>Bienvenido</h1>
+              <p>
+                Registrate con tus datos personales para utilizar todas las
+                caracteristicas del sitio
+              </p>
+              <button type="submit" class="hidden" id="Registrarse">
+                Registrarse
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=================Footer=================-->
+
+    <span class="footer__copy">
+      &#169; Copyright Jeronimo Casella. all rights reserved
+    </span>
+
+    <!--=================Scrollreveal=================-->
+    <script src="js\raw.githubusercontent.com_jlmakes_scrollreveal_master_dist_scrollreveal.min.js"></script>
+
+    <!--=================Scroll-up=================-->
+    <a href="#" class="scrollup" id="scroll-up"
+      ><i class="ri-arrow-up-line"></i>
+    </a>
+    <!--------------Main-Js-------------->
+    <script src="js\main.js"></script>
+  </body>
+</html>
