@@ -89,3 +89,52 @@ sr.reveal(`.home__data`, { origin: "bottom" });
 sr.reveal(`.about__data, .recently__data`, { origin: "left" });
 sr.reveal(`.about__img, .recently__img`, { origin: "right" });
 sr.reveal(`.popular__card`, { interval: 100 });
+
+/*=============== LOGIN ===============*/
+const container = document.getElementById("section__container");
+const registerBtn = document.getElementById("Registrarse");
+const loginBtn = document.getElementById("login");
+
+registerBtn.addEventListener("click", () => {
+  container.classList.add("active");
+});
+
+loginBtn.addEventListener("click", () => {
+  container.classList.remove("active");
+});
+
+/*=============== LOGIN ===============*/
+
+/*=============== validacion login ===============*/
+const nombre = document.getElementById("nombre__registro");
+const email = document.getElementById("email__registro");
+const contraseña = document.getElementById("contraseña__registro");
+const form = document.getElementById("form__registro");
+const parrafo = document.getElementById("warnings");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let warnings = "";
+  let entrar = false;
+  let regexEmail =
+    /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+  parrafo.innerHTML = "";
+  console.log("Formulario enviado");
+  if (nombre.value.length < 6) {
+    warnings += `Nombre demasiado corto<br>`;
+    entrar = true;
+  }
+  console.log(regexEmail.test(email.value));
+  if (!regexEmail.test(email.value)) {
+    warnings += `Correo electrónico no válido<br>`;
+    entrar = true; //
+  }
+  if (contraseña.value.length < 8) {
+    warnings += `La contraseña no es valida<br>`;
+    entrar = true;
+  }
+
+  if (entrar) {
+    parrafo.innerHTML = warnings;
+  }
+});
