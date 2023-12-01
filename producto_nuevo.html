@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Producto Nuevo</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="shortcut icon" href="Imagenes\5788416411632316492-128.png" />
+
+    <!--=================REMIXICONS=================-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!--=================CSS=================-->
+    <link rel="stylesheet" href="CSS\styles.css" />
+  </head>
+  <body class="new__body">
+    <main>
+      <div class="wrapper" id="app">
+        <form>
+          <h1>Alta de Producto</h1>
+          <div class="input__box">
+            <label for="nombre"></label>
+            <input
+              type="text"
+              placeholder="Nombre"
+              name="nombre"
+              id="nombre"
+              v-model="nombre"
+            /><i class="ri-survey-line"></i>
+          </div>
+          <div class="input__box">
+            <label for="precio"></label>
+            <input
+              type="number"
+              placeholder="Precio"
+              name="precio"
+              id="precio"
+              v-model="precio"
+            /><i class="ri-price-tag-3-line"></i>
+          </div>
+          <div class="input__box">
+            <label for="stock"></label>
+            <input
+              type="number"
+              placeholder="Stock"
+              name="stock"
+              id="stock"
+              v-model="stock"
+            /><i class="ri-dropbox-line"></i>
+          </div>
+          <div class="input__box">
+            <label for="imagen"></label>
+            <input
+              type="text"
+              placeholder="Imagen"
+              name="imagen"
+              id="imagen"
+              v-model="imagen"
+            />
+            <img width="100" :src="imagen" alt="" />
+          </div>
+          <button type="button" class="button__upload" v-on:click="grabar()">
+            Grabar
+          </button>
+        </form>
+      </div>
+    </main>
+
+   
+    <script src="js\main.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js\productos.js"></script>
+  </body>
+</html>

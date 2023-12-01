@@ -340,7 +340,7 @@ body.dark-theme {
 }
 
 /*=============== BUTTON ===============*/
-.button {
+.home_button {
   display: inline-flex;
   align-items: center;
   column-gap: 0.5rem;
@@ -533,6 +533,18 @@ body.dark-theme {
 
 .newsletter__button {
   cursor: pointer;
+}
+
+.newsletter__button {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  background-color: var(--first-color);
+  padding: 1rem 1.5rem;
+  border-radius: 4rem;
+  color: #fff;
+  font-weight: var(--font-medium);
+  transition: background 0.3s;
 }
 
 /*=============== FOOTER ===============*/
@@ -919,6 +931,157 @@ body.dark-theme {
   margin: auto;
   color: #fff;
   padding-top: 20px;
+}
+
+/*=============== Productos ===============*/
+
+td img {
+  width: 7rem;
+  position: relative;
+}
+
+table,
+th,
+td {
+  padding: 1rem;
+}
+
+thead th {
+  background-color: var(--first-color-alt);
+  position: sticky;
+}
+
+.dark-theme thead th {
+  background-color: var(--container-color);
+}
+
+.dark-theme tbody {
+  background-color: var(--container-color);
+}
+
+tbody {
+  background-color: var(--first-color);
+}
+
+#crud__table {
+  margin-top: 1rem;
+  background-color: var(--body-color);
+  box-shadow: 0 0.4rem 0.8rem var(--first-color);
+  border-radius: 0.8rem;
+  margin: 0.8rem auto;
+  overflow: auto;
+}
+
+#button__crud {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  background-color: var(--first-color);
+  padding: 1rem 1.5rem;
+  border-radius: 4rem;
+  color: #fff;
+  font-weight: var(--font-medium);
+  transition: background 0.3s;
+  width: 120px;
+  margin-top: 1rem;
+}
+
+#button__crud:hover i {
+  transform: translatey(-0.25rem);
+}
+
+#button__edit {
+  background-color: var(--text-color);
+  padding: 1rem 1.5rem;
+  border-radius: 4rem;
+  color: #fff;
+  font-weight: var(--font-medium);
+  transition: background 0.3s;
+  margin-right: 1rem;
+}
+
+#button__delete {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  background-color: var(--text-color);
+  padding: 1rem 1.5rem;
+  border-radius: 4rem;
+  color: #fff;
+  font-weight: var(--font-medium);
+  transition: background 0.3s;
+  width: 100px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+/*=============== Subir Producto ===============*/
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.new__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--body-color);
+}
+.wrapper {
+  width: 420px;
+  background: var(--container-color);
+  border-radius: 10px;
+  padding: 30px 40px;
+  box-shadow: 0 5px 15px hsla(191, 64%, 48%, 0.8);
+}
+
+.wrapper h1 {
+  font-size: 36px;
+  text-align: center;
+}
+
+.wrapper .input__box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+
+  margin: 30px 0;
+}
+
+.input__box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid hsla(191, 83%, 32%, 0.8);
+  border-radius: 40px;
+  padding: 20px 45px 20px 20px;
+}
+
+.input__box i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.wrapper .button__upload {
+  width: 100%;
+  height: 45px;
+  background: var(--first-color);
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px hsla(191, 83%, 32%, 0.8);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 /*=============== BREAKPOINTS ===============*/
