@@ -1,42 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--=================FAVICON=================-->
+    <link rel="shortcut icon" href="Imagenes\5788416411632316492-128.png" />
 
-    <!-- Bootstrap CSS v5.2.1 -->
+    <!--=================REMIXICONS=================-->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
       rel="stylesheet"
-      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-      crossorigin="anonymous"
     />
+
+    <!--=================CSS=================-->
+    <link rel="stylesheet" href="CSS\styles.css" />
+
+    <title>Ultima Ficha</title>
   </head>
-
   <body>
-    <header id="header"></header>
-    <main></main>
-    <footer>
-      <!-- place footer here -->
+    <!--=================HEADER=================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">
+          <img src="Imagenes\5788416411632316492-128.png" alt="logo image" />
+          Ultima Ficha
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link">Inicio</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#about" class="nav__link">Sobre nosotros</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#popular" class="nav__link">Pcs populares</a>
+            </li>
+            <li class="nav__item">
+              <a href="#recently" class="nav__link">Novedades</a>
+            </li>
+            <li class="nav__item">
+              <a href="productos.html" class="nav__link">Productos</a>
+            </li>
+            <li class="nav__item">
+              <a href="login.html" class="nav__link">Inicio de sesion</a>
+            </li>
+          </ul>
+          <!--close button-->
+          <div class="nav__close" id="nav-close">
+            <i class="ri-close-line"></i>
+          </div>
+          <img
+            src="Imagenes\network-lines-3.webp"
+            alt="nav image"
+            class="nav__img-1"
+          />
+          <img
+            src="Imagenes\network-lines-3.webp"
+            alt="nav image"
+            class="nav__img-2"
+          />
+        </div>
+
+        <div class="nav__buttons">
+          <i class="ri-moon-line change-theme" id="theme-button"></i>
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-apps-2-line"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--=================MAIN=================-->
+    <main class="main">
+      <!--=================HOME=================-->
+      <section class="home section" id="home">
+        <div class="home__container container grid">
+          <img
+            src="Imagenes\PC-NSX-2060-1.png"
+            alt="home image"
+            class="home__img"
+          />
+          <div class="home__data">
+            <h1 class="home__title">
+              Tu hardware
+              <div>
+                <img src="Imagenes\video-card_2656271.png" alt="home image" />
+                ideal
+              </div>
+            </h1>
+            <p class="home__description">
+              Innovación en Cada Chip: Tu Fuente Confiable para Hardware
+              Tecnológico, solo en Ultima Ficha
+            </p>
+
+            <a href="#" class="home_button">
+              Elije ya <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!--=================Sobre nosotros=================-->
+      <section class="about section" id="about">
+        <div class="about__container container grid">
+          <div class="about__data">
+            <span class="section__subtitle">Sobre nosotros</span>
+            <h2 class="section__title about__title">
+              <div>
+                Nosotros
+                <img src="Imagenes\motherboard_427950 (1).png" alt="" />
+              </div>
+
+              Entregamos confianza y seguridad
+            </h2>
+
+            <p class="about__description">
+              Nuestros componentes llegan desde las mejores ensambladoras y
+              productoras que hay en el mercado, consideramos que entregar lo
+              mejor en cuanto a calidad es algo imprescindible para un
+              rendimiento que supere las expectativas al comprar.
+            </p>
+          </div>
+          <img
+            src="Imagenes\2111031653040.webp"
+            alt="about__image"
+            class="about__img"
+          />
+        </div>
+      </section>
+      <!--=================PCs populares=================-->
+      <section class="popular section" id="popular">
+        <span class="section__subtitle">Las PCs mas vendidas</span>
+        <h2 class="section__title">PCs pre armadas</h2>
+        <div class="popular__container container grid">
+          <article class="popular__card">
+            <img
+              src="Imagenes\oficina.png"
+              alt="popular image"
+              class="popular__img"
+            />
+            <h3 class="popular__name">Oficina</h3>
+            <span class="popular__description"
+              >Computadora para uso diario y programas basicos de trabajo</span
+            >
+            <span class="popular__price">94.999$</span>
+            <button class="popular__button">
+              <i class="ri-shopping-bag-line"></i>
+            </button>
+          </article>
+          <article class="popular__card">
+            <img
+              src="Imagenes\mid-end.png"
+              alt="popular image"
+              class="popular__img"
+            />
+            <h3 class="popular__name">Medio rendimiento</h3>
+            <span class="popular__description"
+              >Computadora para actividades diarias y gaming medio</span
+            >
+            <span class="popular__price">349.999$</span>
+            <button class="popular__button">
+              <i class="ri-shopping-bag-line"></i>
+            </button>
+          </article>
+          <article class="popular__card">
+            <img
+              src="Imagenes\high end 2.webp"
+              alt="popular image"
+              class="popular__img"
+            />
+            <h3 class="popular__name">Alto rendimiento</h3>
+            <span class="popular__description"
+              >Computadora de alto rendimiento, con una grafica dedicada</span
+            >
+            <span class="popular__price">749.999$</span>
+            <button class="popular__button">
+              <i class="ri-shopping-bag-line"></i>
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section class="recently section" id="recently">
+        <div class="recently__container container grid">
+          <div class="recently__data">
+            <span class="section__subtitle">Novedades</span>
+            <h2 class="section__title">Linea 4000 Nvidia</h2>
+            <p class="recently__description">
+              Las GPUs NVIDIA® GeForce RTX™ Serie 40 son más que rápidas para
+              los jugadores y los creadores. Están impulsadas por la
+              arquitectura NVIDIA Ada Lovelace ultraeficiente, que ofrece un
+              salto cualitativo en el rendimiento y los gráficos impulsados por
+              IA.
+            </p>
+
+            <a href="#" class="newsletter__button">
+              Compre ahora <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+          <img
+            src="Imagenes\geforce-rtx-4090-product-photo-002.png"
+            alt="recently__img"
+            class="recently__img"
+          />
+        </div>
+      </section>
+      <!--=================Novedades=================-->
+      <section class="newsletter section">
+        <div class="newsletter__container container">
+          <div class="newsletter__content grid">
+            <img
+              src="Imagenes\VENG_LPX_BLU_08.png"
+              alt="newsletter image"
+              class="newsletter__img"
+            />
+            <div class="newsletter__data">
+              <span class="section__subtitle">Novedades</span>
+              <h2 class="section__title">
+                Suscribite para recibir las novedades antes que nadie.
+              </h2>
+              <form action="" class="newsletter__form">
+                <input
+                  type="email"
+                  placeholder="Ingrese su Mail"
+                  class="newsletter__input"
+                />
+                <button class="button newsletter__button">
+                  Suscribirse <i class="ri-send-plane-line"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--=================Footer=================-->
+    <footer class="footer">
+      <div class="footer__container container grid">
+        <div>
+          <a href="#" class="footer__logo">
+            <img src="Imagenes\5788416411632316492-128.png" alt="Logo__img" />
+            Ultima Ficha
+          </a>
+          <p class="footer__description">
+            Hoy en dia una computadora es como una parte mas de nuestro
+            cuerpo,parte de nuestro dia a dia y de nuestras vidas.
+          </p>
+        </div>
+
+        <div class="footer__content">
+          <div>
+            <h3 class="footer__title">Compras</h3>
+            <ul class="footer__links">
+              <li>
+                <a href="#" class="footer__links">Sobre nosotros</a>
+              </li>
+              <li>
+                <a href="#" class="footer__links">Catalogo</a>
+              </li>
+              <li>
+                <a href="#" class="footer__links">Ofertas</a>
+              </li>
+              <li>
+                <a href="#" class="footer__links">Cotizacion</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer__title">Informacion</h3>
+            <ul class="footer__links">
+              <li>
+                <a href="#" class="footer__links">Contacto</a>
+              </li>
+              <li>
+                <a href="#" class="footer__links">Pedidos y reembolsos</a>
+              </li>
+              <li>
+                <a href="#" class="footer__links">Fotos y Videos</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer__title">Direccion</h3>
+            <ul class="footer__links">
+              <li class="footer__information">
+                Av. siempreviva 1346 <br />
+                Springfield, USA
+              </li>
+              <li class="footer__information">9AM - 11PM</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer__title">Redes sociales</h3>
+            <ul class="footer__social">
+              <a
+                href="https://www.facebook.com/?locale=es_LA"
+                target="_blank"
+                class="footer__social-link"
+                ><i class="ri-facebook-circle-fill"></i>
+              </a>
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                class="footer__social-link"
+              >
+                <i class="ri-instagram-fill"></i
+              ></a>
+              <a
+                href="https://twitter.com/home?lang=es"
+                target="_blank"
+                class="footer__social-link"
+                ><i class="ri-twitter-fill"></i>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__info__container">
+        <div class="footer__card">
+          <img src="Imagenes\footer-card-1.png" alt="footer image" />
+          <img src="Imagenes\footer-card-2.png" alt="footer image" />
+          <img src="Imagenes\footer-card-3.png" alt="footer image" />
+          <img src="Imagenes\footer-card-4.png" alt="footer image" />
+        </div>
+        <span class="footer__copy">
+          &#169; Copyright Ultima Ficha SA. all rights reserved
+        </span>
+      </div>
     </footer>
-    <!-- Bootstrap JavaScript Libraries -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"
-    ></script>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
-      crossorigin="anonymous"
-    ></script>
+    <!--=================Scrollreveal=================-->
+    <script src="js\raw.githubusercontent.com_jlmakes_scrollreveal_master_dist_scrollreveal.min.js"></script>
 
+    <!--=================Scroll-up=================-->
+    <a href="#" class="scrollup" id="scroll-up"
+      ><i class="ri-arrow-up-line"></i>
+    </a>
+
+    <!--Main Js-->
     <script src="js\main.js"></script>
   </body>
 </html>

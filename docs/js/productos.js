@@ -1,14 +1,16 @@
-const { createApp, ref } = Vue;
-
+const { createApp } = Vue;
 createApp({
   data() {
     return {
       productos: [],
-      url: "http://casellajeronimo.pythonanywhere.com/productos",
-      // si el backend esta corriendo local  usar localhost 5000(si no lo subieron a pythonanywhere)
+      // esto es para el boton modificar +(location.search.substr(4)===""?'':"/")+location.search.substr(4)
+      url:
+        "https://mcerda.pythonanywhere.com/productos" +
+        (location.search.substr(4) === "" ? "" : "/") +
+        location.search.substr(4),
       error: false,
       cargando: true,
-      /*atributos para el guardar los valores del formulario */
+      /*alta*/
       id: 0,
       nombre: "",
       imagen: "",
@@ -23,6 +25,12 @@ createApp({
         .then((data) => {
           this.productos = data;
           this.cargando = false;
+          // esto es para boton modificar
+          this.id = data.id;
+          this.nombre = data.nombre;
+          this.imagen = data.imagen;
+          this.stock = data.stock;
+          this.precio = data.precio;
         })
         .catch((err) => {
           console.error(err);
@@ -30,15 +38,14 @@ createApp({
         });
     },
     eliminar(id) {
-      const url = this.url + "/" + id;
+      const url = "https://mcerda.pythonanywhere.com/productos/" + id;
       var options = {
         method: "DELETE",
       };
       fetch(url, options)
         .then((res) => res.text()) // or res.json()
         .then((res) => {
-          alert("Registro Eliminado");
-          location.reload(); // recarga el json luego de eliminado el registro
+          location.reload();
         });
     },
     grabar() {
@@ -57,11 +64,34 @@ createApp({
       fetch(this.url, options)
         .then(function () {
           alert("Registro grabado");
-          window.location.href = "./productos.html"; // recarga productos.html
+          window.location.href = "./productos.html";
         })
         .catch((err) => {
           console.error(err);
-          alert("Error al Grabar"); // puedo mostrar el error tambien
+          alert("Error al Grabarr");
+        });
+    },
+    modificar() {
+      let producto = {
+        nombre: this.nombre,
+        precio: this.precio,
+        stock: this.stock,
+        imagen: this.imagen,
+      };
+      var options = {
+        body: JSON.stringify(producto),
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        redirect: "follow",
+      };
+      fetch(this.url, options)
+        .then(function () {
+          alert("Registro modificado");
+          window.location.href = "./productos.html";
+        })
+        .catch((err) => {
+          console.error(err);
+          alert("Error al Modificar");
         });
     },
   },
