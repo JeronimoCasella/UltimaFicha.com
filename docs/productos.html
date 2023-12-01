@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ultima Ficha</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!--=================FAVICON=================-->
+    <link rel="shortcut icon" href="Imagenes\5788416411632316492-128.png" />
+
+    <!--=================REMIXICONS=================-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!--=================CSS=================-->
+    <link rel="stylesheet" href="CSS\styles.css" />
+
+    <title>Ultima Ficha</title>
+  </head>
+  <body id="productos__body">
+    <!--=================HEADER=================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="index.html" class="nav__logo">
+          <img src="Imagenes\5788416411632316492-128.png" alt="logo image" />
+          Ultima Ficha
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link">Inicio</a>
+            </li>
+            <li class="nav__item">
+              <a href="productos.html" class="nav__link">Productos</a>
+            </li>
+            <li class="nav__item">
+              <a href="login.html" class="nav__link">Inicio de sesion</a>
+            </li>
+          </ul>
+          <!--close button-->
+          <div class="nav__close" id="nav-close">
+            <i class="ri-close-line"></i>
+          </div>
+          <img
+            src="Imagenes\network-lines-3.webp"
+            alt="nav image"
+            class="nav__img-1"
+          />
+          <img
+            src="Imagenes\network-lines-3.webp"
+            alt="nav image"
+            class="nav__img-2"
+          />
+        </div>
+
+        <div class="nav__buttons">
+          <i class="ri-moon-line change-theme" id="theme-button"></i>
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-apps-2-line"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!----------------CRUD----------------->
+    <main>
+      <div id="app" class="container">
+        <h1>Productos</h1>
+        <br />
+        <h1 class="h1_productos">Productos</h1>
+        <a class="button" id="button__crud" href="producto_nuevo.html"
+          >Nuevo<i class="ri-arrow-up-line"></i
+        ></a>
+        <br /><br />
+        <div v-if="error">
+          <p>Lo sentimos , ........</p>
+        </div>
+        <div v-else>
+          <section v-if="cargando">
+            <div class="spinner-border"></div>
+            <p>Cargando .....</p>
+          </section>
+          <section v-else class="table__header">
+            <table id="crud__table">
+              <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Precio</th>
+                  <th scope="col">Stock</th>
+                  <th scope="col">Imagen</th>
+                  <th scope="col">Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="" v-for="producto in productos">
+                  <td>{{producto.id}}</td>
+                  <td>{{producto.nombre}}</td>
+                  <td>{{producto.precio}}</td>
+                  <td>{{producto.stock}}</td>
+                  <td>
+                    <img :src="producto.imagen" :alt="producto.nombre" />
+                  </td>
+                  <td>
+                    <a
+                      class="button"
+                      id="button__edit"
+                      :href="'producto_update.html?id='+ producto.id"
+                      >Editar</a
+                    >
+
+                    <button
+                      type="button"
+                      class="button"
+                      id="button__delete"
+                      v-on:click="eliminar(producto.id)"
+                    >
+                      Eliminar
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+
+    <script src="js\main.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js\productos.js"></script>
+    <script src="js\producto_editar.js"></script>
+  </body>
+</html>
