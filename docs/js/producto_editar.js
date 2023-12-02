@@ -10,7 +10,7 @@ createApp({
       imagen: "",
       stock: 0,
       precio: 0,
-      url: "http://casellajeronimo.pythonanywhere.com/productos/" + id,
+      url: "https://casellajeronimo.pythonanywhere.com/productos/" + id,
     };
   },
   methods: {
