@@ -5,7 +5,7 @@ createApp({
       productos: [],
       // esto es para el boton modificar +(location.search.substr(4)===""?'':"/")+location.search.substr(4)
       url:
-        "http://casellajeronimo.pythonanywhere.com/productos" +
+        "https://casellajeronimo.pythonanywhere.com/productos" +
         (location.search.substr(4) === "" ? "" : "/") +
         location.search.substr(4),
       error: false,
@@ -38,7 +38,7 @@ createApp({
         });
     },
     eliminar(id) {
-      const url = "http://casellajeronimo.pythonanywhere.com/productos/" + id;
+      const url = "https://casellajeronimo.pythonanywhere.com/productos/" + id;
       var options = {
         method: "DELETE",
       };
