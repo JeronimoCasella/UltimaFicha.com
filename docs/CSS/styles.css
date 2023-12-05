@@ -946,6 +946,22 @@ td {
   padding: 1rem;
 }
 
+td .button {
+  margin: 2 !important;
+  padding: 2 !important;
+  box-shadow: 4px 4px 6px rgb(31, 27, 71);
+
+}
+
+td .button:hover {
+  transform: scale(1.1);
+    transition: 0.5s !important;
+}
+.tdAcciones {
+  display: flex;
+  flex-direction: column;
+}
+
 thead th {
   background-color: var(--first-color-alt);
   position: sticky;

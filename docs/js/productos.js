@@ -68,7 +68,7 @@ createApp({
         })
         .catch((err) => {
           console.error(err);
-          alert("Error al Grabarr");
+          alert("Error al Grabar");
         });
     },
     modificar() {
