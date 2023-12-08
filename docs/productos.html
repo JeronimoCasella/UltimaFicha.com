@@ -94,6 +94,7 @@
                   <th scope="col">Precio</th>
                   <th scope="col">Stock</th>
                   <th scope="col">Imagen</th>
+                  <th scope="col">Categoria</th>
                   <th scope="col">Acciones</th>
                 </tr>
               </thead>
@@ -106,6 +107,7 @@
                   <td>
                     <img :src="producto.imagen" :alt="producto.nombre" />
                   </td>
+                  <td>{{producto.categoria}}</td>
                   <td class="tdAcciones">
                     <a
                       class="button"

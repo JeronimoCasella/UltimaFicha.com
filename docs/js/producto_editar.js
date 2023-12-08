@@ -10,7 +10,8 @@ createApp({
       imagen: "",
       stock: 0,
       precio: 0,
-      url: "https://casellajeronimo.pythonanywhere.com/productos/" + id,
+      categoria: "",
+      url: "https://jernocas.pythonanywhere.com/productos/" + id,
     };
   },
   methods: {
@@ -24,6 +25,7 @@ createApp({
           this.imagen = data.imagen;
           this.stock = data.stock;
           this.precio = data.precio;
+          this.categoria = data.categoria;
         })
         .catch((err) => {
           console.error(err);
@@ -36,6 +38,7 @@ createApp({
         precio: this.precio,
         stock: this.stock,
         imagen: this.imagen,
+        categoria: this.categoria,
       };
       var options = {
         body: JSON.stringify(producto),

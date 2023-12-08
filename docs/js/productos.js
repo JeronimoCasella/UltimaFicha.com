@@ -5,7 +5,7 @@ createApp({
       productos: [],
       // esto es para el boton modificar +(location.search.substr(4)===""?'':"/")+location.search.substr(4)
       url:
-        "https://casellajeronimo.pythonanywhere.com/productos" +
+        "https://jernocas.pythonanywhere.com/productos" +
         (location.search.substr(4) === "" ? "" : "/") +
         location.search.substr(4),
       error: false,
@@ -16,6 +16,7 @@ createApp({
       imagen: "",
       stock: 0,
       precio: 0,
+      categoria: 0,
     };
   },
   methods: {
@@ -31,6 +32,7 @@ createApp({
           this.imagen = data.imagen;
           this.stock = data.stock;
           this.precio = data.precio;
+          this.categoria = data.categoria;
         })
         .catch((err) => {
           console.error(err);
@@ -38,7 +40,7 @@ createApp({
         });
     },
     eliminar(id) {
-      const url = "https://casellajeronimo.pythonanywhere.com/productos/" + id;
+      const url = "https://jernocas.pythonanywhere.com/productos/" + id;
       var options = {
         method: "DELETE",
       };
@@ -54,6 +56,7 @@ createApp({
         precio: this.precio,
         stock: this.stock,
         imagen: this.imagen,
+        categoria: this.categoria,
       };
       var options = {
         body: JSON.stringify(producto),
@@ -77,6 +80,7 @@ createApp({
         precio: this.precio,
         stock: this.stock,
         imagen: this.imagen,
+        categoria: this.categoria,
       };
       var options = {
         body: JSON.stringify(producto),
