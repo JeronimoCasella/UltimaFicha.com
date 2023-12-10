@@ -138,3 +138,5 @@ form.addEventListener("submit", (e) => {
     parrafo.innerHTML = warnings;
   }
 });
+
+/*=============== SEARCH-ENGINE ===============*/

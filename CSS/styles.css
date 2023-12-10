@@ -131,6 +131,15 @@ body.dark-theme {
   background-color: var(--body-color);
 }
 
+.dark-theme .search__content {
+  background-color: var(--container-color);
+}
+
+.dark-theme .search__form,
+.dark-theme .search__input {
+  background-color: var(--body-color);
+}
+
 .dark-theme::-webkit-scrollbar {
   background-color: hsl(191, 8%, 15%);
 }
@@ -946,6 +955,21 @@ td {
   padding: 1rem;
 }
 
+td .button {
+  margin: 2 !important;
+  padding: 2 !important;
+  box-shadow: 4px 4px 6px rgb(31, 27, 71);
+}
+
+td .button:hover {
+  transform: scale(1.1);
+  transition: 0.5s !important;
+}
+.tdAcciones {
+  display: flex;
+  flex-direction: column;
+}
+
 thead th {
   background-color: var(--first-color-alt);
   position: sticky;
@@ -1082,6 +1106,44 @@ input[type="number"]::-webkit-outer-spin-button {
   color: #333;
   font-weight: 600;
   margin-bottom: 1rem;
+}
+
+/*=============== Search ===============*/
+
+.search__form {
+  background-color: #fff;
+  padding: 5px 5px 5px 16px;
+  border-radius: 4rem;
+  display: flex;
+  margin-top: 10px;
+}
+
+.search__input,
+.search__button {
+  font-family: var(--body-font);
+  border: none;
+  outline: var(--normal-font-size);
+}
+
+.search__input {
+  width: 90%;
+  color: var(--text-color);
+}
+
+.search__button {
+  cursor: pointer;
+}
+
+.search__button {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  background-color: var(--first-color);
+  padding: 1rem 1.5rem;
+  border-radius: 4rem;
+  color: #fff;
+  font-weight: var(--font-medium);
+  transition: background 0.3s;
 }
 
 /*=============== BREAKPOINTS ===============*/

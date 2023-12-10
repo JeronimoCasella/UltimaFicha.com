@@ -73,9 +73,11 @@
         <h1>Productos</h1>
         <br />
         <h1 class="h1_productos">Productos</h1>
+
         <a class="button" id="button__crud" href="producto_nuevo.html"
           >Nuevo<i class="ri-arrow-up-line"></i
         ></a>
+
         <br /><br />
         <div v-if="error">
           <p>Lo sentimos , ........</p>
@@ -89,24 +91,26 @@
             <table id="crud__table">
               <thead>
                 <tr>
-                  <th scope="col">ID</th>
-                  <th scope="col">Nombre</th>
-                  <th scope="col">Precio</th>
-                  <th scope="col">Stock</th>
-                  <th scope="col">Imagen</th>
-                  <th scope="col">Acciones</th>
+                  <th class="list__group__item" scope="col">ID</th>
+                  <th class="list__group__item" scope="col">Nombre</th>
+                  <th class="list__group__item" scope="col">Precio</th>
+                  <th class="list__group__item" scope="col">Stock</th>
+                  <th class="list__group__item" scope="col">Imagen</th>
+                  <th class="list__group__item" scope="col">Categoria</th>
+                  <th class="list__group__item" scope="col">Acciones</th>
                 </tr>
               </thead>
               <tbody>
                 <tr class="" v-for="producto in productos">
-                  <td>{{producto.id}}</td>
-                  <td>{{producto.nombre}}</td>
-                  <td>{{producto.precio}}</td>
-                  <td>{{producto.stock}}</td>
-                  <td>
+                  <td class="list__group__item">{{producto.id}}</td>
+                  <td class="list__group__item">{{producto.nombre}}</td>
+                  <td class="list__group__item">{{producto.precio}}</td>
+                  <td class="list__group__item">{{producto.stock}}</td>
+                  <td class="list__group__item">
                     <img :src="producto.imagen" :alt="producto.nombre" />
                   </td>
-                  <td>
+                  <td class="list__group__item">{{producto.categoria}}</td>
+                  <td class="tdAcciones">
                     <a
                       class="button"
                       id="button__edit"
