@@ -85,8 +85,8 @@
             <div class="spinner-border"></div>
             <p>Cargando .....</p>
           </section>
-          <section v-else class="table__header">
-            <table id="crud__table">
+          <!--<section v-else class="table__header">
+              <table id="crud__table">
               <thead>
                 <tr>
                   <th scope="col">ID</th>
@@ -127,7 +127,62 @@
                   </td>
                 </tr>
               </tbody>
-            </table>
+            </table> -->
+  <!--         <div class="check-container">
+            <div class="checkbox">
+                <input type="checkbox" id="checkAvanzado" value="Valor"/>
+                <label for="checkAvanzado">Monitores</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="checkAvanzado" value="Valor"/>
+              <label for="checkAvanzado">Perifericos</label>
+            </div>
+            <div class="checkbox">
+                  <input type="checkbox" id="checkAvanzado" value="Valor"/>
+                  <label for="checkAvanzado">Motherboards</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="checkAvanzado" value="Valor"/>
+                <label for="checkAvanzado">Gabinetes</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="checkAvanzado" value="Valor"/>
+              <label for="checkAvanzado">Procesadores</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" id="checkAvanzado" value="Valor"/>
+            <label for="checkAvanzado">Memorias</label>
+        </div>
+          </div> -->
+          <!--FILTRO POR CATEGORIA-->
+          <div>
+            <div v-for="categoria in categoriaFiltrada" :key="categoria">
+              <input type="checkbox" role="switch" :id="categoria" :value="categoria.toLowercase()" v-model="categoriaSeleccionada"> {{ categoria }}
+            </div>
+          </div>
+          <div class="card-container">
+            <div v-for="producto in productos" class="card">
+              <img v-bind:src="producto.imagen" :alt="producto.imagen">
+              <h3>{{producto.nombre}}</h3>
+              <p>Precio:{{producto.precio}}</p>
+              <p>Unidades Disponibles:{{producto.stock}}</p>
+              <p>id: {{producto.id}}</p>
+              <a
+                      class="button"
+                      id="button__edit"
+                      :href="'producto_update.html?id='+ producto.id"
+                      >Editar</a
+                    >
+                    <button
+                      type="button"
+                      class="button"
+                      id="button__delete"
+                      v-on:click="eliminar(producto.id)"
+                    >
+                      Eliminar
+                    </button>
+            </div>
+          </div>
           </section>
         </div>
       </div>
