@@ -950,12 +950,11 @@ td .button {
   margin: 2 !important;
   padding: 2 !important;
   box-shadow: 4px 4px 6px rgb(31, 27, 71);
-
 }
 
 td .button:hover {
   transform: scale(1.1);
-    transition: 0.5s !important;
+  transition: 0.5s !important;
 }
 .tdAcciones {
   display: flex;
@@ -979,13 +978,49 @@ tbody {
   background-color: var(--first-color);
 }
 
-#crud__table {
-  margin-top: 1rem;
-  background-color: var(--body-color);
-  box-shadow: 0 0.4rem 0.8rem var(--first-color);
-  border-radius: 0.8rem;
-  margin: 0.8rem auto;
-  overflow: auto;
+/*=================CARDS=================*/
+.card-container {
+  width: 100%;
+  max-width: 1200px;
+  height: 430px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+.card {
+  margin: 1rem;
+  width: 14rem !important;
+  background: var(--container-color);
+  color: rgb(0, 0, 0);
+  border-radius: 1rem;
+  border: 2px solid rgb(9, 17, 14);
+  box-shadow: 0 8px 20px hsla(191, 64%, 48%, 0.8);
+  text-align: center;
+  transition: all 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+.card img {
+  width: 330px;
+  height: 220px;
+}
+.card h3 {
+  font-weight: 600;
+  margin: 3px;
+}
+.card p {
+  padding: 0 1rem;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--text-color);
+}
+.card .button:hover {
+  background-color: red !important;
+  color: #333 !important;
 }
 
 #button__crud {
@@ -1007,10 +1042,11 @@ tbody {
 }
 
 #button__edit {
-  background-color: var(--text-color);
+  background-color: var(--first-color);
   padding: 1rem 1.5rem;
   border-radius: 4rem;
   color: #fff;
+  width: 100px;
   font-weight: var(--font-medium);
   transition: background 0.3s;
   margin-right: 1rem;
@@ -1020,7 +1056,7 @@ tbody {
   display: inline-flex;
   align-items: center;
   column-gap: 0.5rem;
-  background-color: var(--text-color);
+  background-color: var(--first-color);
   padding: 1rem 1.5rem;
   border-radius: 4rem;
   color: #fff;
@@ -1029,6 +1065,9 @@ tbody {
   width: 100px;
   margin-top: 1rem;
   cursor: pointer;
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
 }
 /*=============== Subir Producto ===============*/
 
