@@ -57,6 +57,73 @@
       </nav>
     </header>
     <!--=================LOGIN=================-->
+    <!--  <style type="text/css">
+      form {
+        width: 600px;
+        margin: 200px auto;
+      }
+      div {
+        width: 100%;
+        margin: 15px auto;
+      }
+      label {
+        display: block;
+        padding: 20px;
+        font-size: 25px;
+      }
+      input {
+        width: 96%;
+        padding: 10px;
+        border: 1px solid #797979;
+        margin-left: 20px;
+        font-size: 20px;
+        border-radius: 3px;
+      }
+      button {
+        margin: 20px;
+        padding: 10px;
+        width: 100px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 5px;
+        background: linear-gradient(90deg, royalblue, lightgreen);
+        font-size: 20px;
+        font-weight: bold;
+        color: whitesmoke;
+      }
+      span {
+        display: block;
+        margin-left: 20px;
+        color: red;
+        font-style: italic;
+      }
+    </style> -->
+
+    <!--  <form id="loginForm">
+      <div>
+        <label for="username">Username</label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Username"
+        />
+        <span></span>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+        />
+        <span></span>
+      </div>
+      <button type="button" id="log-in">Log-in</button>
+    </form> -->
+
     <section class="login__section" id="login__section">
       <div class="section__container" id="section__container">
         <div class="form__container sign-up">
@@ -127,6 +194,31 @@
         </div>
       </div>
     </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("form__inicio")
+          .addEventListener("submit", function (event) {
+            event.preventDefault(); // Evita el envío del formulario por defecto
+
+            // Obtiene los valores de usuario y contraseña
+            var usuario = document.getElementById("nombre__inicio").value;
+            var contrasena =
+              document.getElementById("contraseña__inicio").value;
+
+            // Verifica las credenciales
+            if (usuario === "admin" && contrasena === "admin") {
+              // Credenciales válidas, redirige a productos.html
+              window.location.href = "productos.html";
+            } else {
+              // Credenciales incorrectas, muestra un mensaje de error (puedes personalizarlo)
+              document.getElementById("warnings__inicio").innerText =
+                "Credenciales incorrectas";
+            }
+          });
+      });
+    </script>
+
     <!--=================Footer=================-->
 
     <span class="footer__copy">

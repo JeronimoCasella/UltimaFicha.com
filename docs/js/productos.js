@@ -43,12 +43,14 @@ createApp({
     //FILTRO POR CATEGORIA
     computed: {
       categoriaFiltrada() {
-        return [...new Set(this.productos.map(producto => this.categoria))];
+        return [...new Set(this.productos.map((producto) => this.categoria))];
       },
       productosFiltrados() {
         return this.categoriaSeleccionada.length > 0
-        ? this.productos.filter(producto => this.categoriaSeleccionada.includes(this.categoria))
-        : this.productos;
+          ? this.productos.filter((producto) =>
+              this.categoriaSeleccionada.includes(this.categoria)
+            )
+          : this.productos;
       },
     },
     eliminar(id) {
