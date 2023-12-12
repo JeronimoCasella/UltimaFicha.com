@@ -130,56 +130,20 @@
           />
         </div>
       </section>
-      <!--=================PCs populares=================-->
+      <!--=================Productos populares=================-->
+
       <section class="popular section" id="popular">
-        <span class="section__subtitle">Las PCs mas vendidas</span>
-        <h2 class="section__title">PCs pre armadas</h2>
+        <span class="section__subtitle">Productos populares </span>
         <div class="popular__container container grid">
-          <article class="popular__card">
-            <img
-              src="Imagenes\oficina.png"
-              alt="popular image"
-              class="popular__img"
-            />
-            <h3 class="popular__name">Oficina</h3>
-            <span class="popular__description"
-              >Computadora para uso diario y programas basicos de trabajo</span
-            >
-            <span class="popular__price">94.999$</span>
-            <button class="popular__button">
-              <i class="ri-shopping-bag-line"></i>
-            </button>
-          </article>
-          <article class="popular__card">
-            <img
-              src="Imagenes\mid-end.png"
-              alt="popular image"
-              class="popular__img"
-            />
-            <h3 class="popular__name">Medio rendimiento</h3>
-            <span class="popular__description"
-              >Computadora para actividades diarias y gaming medio</span
-            >
-            <span class="popular__price">349.999$</span>
-            <button class="popular__button">
-              <i class="ri-shopping-bag-line"></i>
-            </button>
-          </article>
-          <article class="popular__card">
-            <img
-              src="Imagenes\high end 2.webp"
-              alt="popular image"
-              class="popular__img"
-            />
-            <h3 class="popular__name">Alto rendimiento</h3>
-            <span class="popular__description"
-              >Computadora de alto rendimiento, con una grafica dedicada</span
-            >
-            <span class="popular__price">749.999$</span>
-            <button class="popular__button">
-              <i class="ri-shopping-bag-line"></i>
-            </button>
-          </article>
+          <div id="app" class="card__container__popular">
+            <div v-for="producto in productos" class="card__popular">
+              <img v-bind:src="producto.imagen" :alt="producto.imagen" />
+              <h3>{{producto.nombre}}</h3>
+              <p>Precio:{{producto.precio}}</p>
+              <p>Stock:{{producto.stock}}</p>
+              <p>Categoria: {{producto.categoria}}</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -334,6 +298,12 @@
       </div>
     </footer>
 
+    <!--Main Js-->
+    <script src="js\main.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js\productos.js"></script>
+    <script src="js\producto_editar.js"></script>
+
     <!--=================Scrollreveal=================-->
     <script src="js\raw.githubusercontent.com_jlmakes_scrollreveal_master_dist_scrollreveal.min.js"></script>
 
@@ -344,5 +314,8 @@
 
     <!--Main Js-->
     <script src="js\main.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js\productos.js"></script>
+    <script src="js\producto_editar.js"></script>
   </body>
 </html>

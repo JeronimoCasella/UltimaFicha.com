@@ -397,18 +397,44 @@ body.dark-theme {
 /*=============== POPULAR ===============*/
 .popular__container {
   padding-top: 4rem;
-  grid-template-columns: 250px;
   justify-content: center;
-  row-gap: 5.5rem;
 }
 
-.popular__card {
-  position: relative;
-  background-color: var(--container-color);
-  padding: 1rem 2rem 1.5rem;
-  box-shadow: 0 8px 20px hsla(191, 64%, 48%, 0.8);
+.card__container__popular {
+  display: grid;
+  grid-template-columns: 250px 250px 250px 250px;
+}
+
+.card__popular {
+  margin: 1rem;
+  background: var(--container-color);
+  color: rgb(0, 0, 0);
   border-radius: 1rem;
+  border: 2px solid rgb(9, 17, 14);
+  box-shadow: 0 8px 20px hsla(191, 64%, 48%, 0.8);
   text-align: center;
+  transition: all 0.25s;
+}
+
+.card__popular:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+.card__popular img {
+  width: 100%;
+  height: 200px;
+  display: block;
+}
+
+.card__popular h3 {
+  font-weight: 600;
+  margin: 3px;
+}
+.card__popular p {
+  padding: 0 1rem;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--text-color);
 }
 
 .popular__img {
@@ -435,27 +461,6 @@ body.dark-theme {
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
   color: var(--first-color);
-}
-
-.popular__button {
-  display: flex;
-  background-color: var(--first-color);
-  padding: 6px;
-  border-radius: 50%;
-  border: none;
-  outline: none;
-  color: #fff;
-  font-size: 1.25rem;
-  box-shadow: 0 4px 20px hsla(191, 64%, 20%, 0.2);
-  position: absolute;
-  bottom: 1.25rem;
-  right: 1.25rem;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.popular__button:hover {
-  background-color: var(--first-color-alt);
 }
 
 .popular__card:hover .popular__img {
@@ -1237,7 +1242,7 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   .popular__container {
-    grid-template-columns: repeat(2, 250px);
+    display: grid;
   }
 
   .footer__content {
@@ -1324,7 +1329,7 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   .popular__container {
-    grid-template-columns: repeat(3, 260px);
+    grid-template-columns: repeat(3, 290px);
     column-gap: 3.5rem;
     padding-block: 6rem, 4rem;
     text-align: center;

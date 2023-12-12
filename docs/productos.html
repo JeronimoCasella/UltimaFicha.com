@@ -81,10 +81,6 @@
           <p>Lo sentimos , ........</p>
         </div>
         <div v-else>
-          <section v-if="cargando">
-            <div class="spinner-border"></div>
-            <p>Cargando .....</p>
-          </section>
           <div>
             <div v-for="categoria in categoriaFiltrada" :key="categoria">
               <input
