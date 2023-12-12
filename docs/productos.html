@@ -155,16 +155,17 @@
         </div>
           </div> -->
           <!--FILTRO POR CATEGORIA-->
-          <div>
-            <div v-for="categoria in categoriaFiltrada" :key="categoria">
-              <input type="checkbox" role="switch" :id="categoria" :value="categoria.toLowercase()" v-model="categoriaSeleccionada"> {{ categoria }}
+          <div id="checkboxes">
+            <div id="checkbox">
+              <input type="checkbox" role="switch" id="categoria" value="categoria">
+              <label for="categoria">Categoria</label>
             </div>
           </div>
           <div class="card-container">
             <div v-for="producto in productos" class="card">
               <img v-bind:src="producto.imagen" :alt="producto.imagen">
               <h3>{{producto.nombre}}</h3>
-              <p>Precio:{{producto.precio}}</p>
+              <p>Precio: ${{producto.precio}}</p>
               <p>Unidades Disponibles:{{producto.stock}}</p>
               <p>id: {{producto.id}}</p>
               <a

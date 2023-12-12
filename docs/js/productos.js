@@ -39,18 +39,6 @@ createApp({
           this.error = true;
         });
     },
-
-    //FILTRO POR CATEGORIA
-    computed: {
-      categoriaFiltrada() {
-        return [...new Set(this.productos.map(producto => this.categoria))];
-      },
-      productosFiltrados() {
-        return this.categoriaSeleccionada.length > 0
-        ? this.productos.filter(producto => this.categoriaSeleccionada.includes(this.categoria))
-        : this.productos;
-      },
-    },
     eliminar(id) {
       const url = "https://jernocas.pythonanywhere.com/productos/" + id;
       var options = {
@@ -115,3 +103,58 @@ createApp({
     this.fetchData(this.url);
   },
 }).mount("#app");
+
+
+/*FILTRO POR CATEGORIA*/
+const contenedorCheck = document.getElementById('checkboxes');
+const input = document.querySelector('input');
+let productos; 
+
+async function getProductos() {
+  await fetch("https://jernocas.pythonanywhere.com/productos")
+    .then(response => response.json())
+    .then(data => {
+      productos = data;
+      createCheckboxes(productos);
+      contenedorCheck.addEventListener('change', function() {
+        const productosFiltrados = filterByCategory(productos);
+      });
+      input.addEventListener('input', function() {
+        const valorInput = input.value.toLowerCase();
+        const productosFiltrados = filterByInput(productos, valorInput);
+      });
+      return productos;
+    })
+    .catch(error => console.error('Error fetching data:', error));
+}
+
+getProductos();
+
+function createCheckboxes(array) {
+  let arrayCategories = array.map(producto => producto.categoria);
+  let setCategory = new Set(arrayCategories);
+  let arrayChecks = Array.from(setCategory);
+  let checkbody = '';
+
+  arrayChecks.forEach(categoria => {
+    checkbody +=
+      `<div id="checkbox">
+        <input type="checkbox" role="switch" id="${categoria}" value="${categoria.toLowerCase()}">
+        <label for="${categoria}">${categoria}</label>
+      </div>`;
+  });
+
+  contenedorCheck.innerHTML = checkbody;
+}
+
+function filterByCategory(array) {
+  let checkboxes = document.querySelectorAll("input[type='checkbox']:checked");
+  let selectedCategories = Array.from(checkboxes).map(checkbox => checkbox.value.toLowerCase());
+  let filteredArray = array.filter(producto => selectedCategories.includes(producto.categoria.toLowerCase()));
+  return filteredArray.length > 0 ? filteredArray : array;
+}
+
+function filterByInput(array, inputValue) {
+  let filteredArray = array.filter(producto => producto.nombre.toLowerCase().includes(inputValue));
+  return filteredArray.length > 0 ? filteredArray : array;
+}
