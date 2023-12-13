@@ -996,17 +996,6 @@ tbody {
 .card {
   margin: 1rem;
   width: 14rem !important;
-  background: rgb(64,69,69);
-  background: radial-gradient(circle, rgba(64,69,69,1) 0%, rgba(196,197,198,1) 57%);
-  color: rgb(0, 0, 0);
-  border-radius: 1rem;
-  border: 2px solid rgb(9, 17, 14);
-  box-shadow: 2px 2px 2px 2px rgb(53, 50, 46);
-  text-align: center;
-  transition: all 0.25s;
-}
-.card:hover{
-
   background: var(--container-color);
   color: rgb(0, 0, 0);
   border-radius: 1rem;
@@ -1017,7 +1006,6 @@ tbody {
 }
 
 .card:hover {
-
   transform: translateY(-15px);
   box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
@@ -1027,25 +1015,12 @@ tbody {
 }
 .card h3 {
   font-weight: 600;
-
   margin: 3px;
 }
 .card p {
   padding: 0 1rem;
   font-size: 16px;
   font-weight: 300;
-}
-.card .button:hover{
-  background-color: red !important;
-  color: #333 !important;
-}
-#crud__table {
-  margin-top: 1rem;
-  background-color: var(--body-color);
-  box-shadow: 0 0.4rem 0.8rem var(--first-color);
-  border-radius: 0.8rem;
-  margin: 0.8rem auto;
-  overflow: auto;
   color: var(--text-color);
 }
 .card .button:hover {
@@ -1472,4 +1447,93 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 @media screen and (min-width: 1280px) {
+}
+
+/* Crud Querys */
+
+@media screen and (max-width: 988px) {
+  .popular__container {
+    padding-top: 4rem;
+    justify-content: center;
+  }
+
+  .card__container__popular {
+    display: grid;
+    grid-template-columns: 230px 230px 230px;
+  }
+
+  .card__popular {
+    margin: 1rem;
+    background: var(--container-color);
+    color: rgb(0, 0, 0);
+    border-radius: 1rem;
+    border: 2px solid rgb(9, 17, 14);
+    box-shadow: 0 8px 20px hsla(191, 64%, 48%, 0.8);
+    text-align: center;
+    transition: all 0.25s;
+  }
+
+  .card__popular img {
+    width: 100%;
+    height: 180px;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 678px) {
+  .popular__container {
+    padding-top: 4rem;
+    justify-content: center;
+  }
+
+  .card__container__popular {
+    display: grid;
+    grid-template-columns: 230px 230px;
+  }
+
+  .card__popular {
+    margin: 1rem;
+    background: var(--container-color);
+    color: rgb(0, 0, 0);
+    border-radius: 1rem;
+    border: 2px solid rgb(9, 17, 14);
+    box-shadow: 0 8px 20px hsla(191, 64%, 48%, 0.8);
+    text-align: center;
+    transition: all 0.25s;
+  }
+
+  .card__popular img {
+    width: 100%;
+    height: 180px;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .popular__container {
+    padding-top: 4rem;
+    justify-content: center;
+  }
+
+  .card__container__popular {
+    display: grid;
+    grid-template-columns: 190px 190px;
+  }
+
+  .card__popular {
+    margin: 1rem;
+    background: var(--container-color);
+    color: rgb(0, 0, 0);
+    border-radius: 1rem;
+    border: 2px solid rgb(9, 17, 14);
+    box-shadow: 0 8px 20px hsla(191, 64%, 48%, 0.8);
+    text-align: center;
+    transition: all 0.25s;
+  }
+
+  .card__popular img {
+    width: 100%;
+    height: 180px;
+    display: block;
+  }
 }

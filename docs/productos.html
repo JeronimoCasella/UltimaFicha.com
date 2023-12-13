@@ -81,7 +81,6 @@
           <p>Lo sentimos , ........</p>
         </div>
         <div v-else>
-<<<<<<< HEAD
           <div>
             <div v-for="categoria in categoriaFiltrada" :key="categoria">
               <input
@@ -92,112 +91,31 @@
                 v-model="categoriaSeleccionada"
               />
               {{ categoria }}
-=======
-          <section v-if="cargando">
-            <div class="spinner-border"></div>
-            <p>Cargando .....</p>
-          </section>
-          <!--<section v-else class="table__header">
-              <table id="crud__table">
-              <thead>
-                <tr>
-                  <th scope="col">ID</th>
-                  <th scope="col">Nombre</th>
-                  <th scope="col">Precio</th>
-                  <th scope="col">Stock</th>
-                  <th scope="col">Imagen</th>
-                  <th scope="col">Categoria</th>
-                  <th scope="col">Acciones</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="" v-for="producto in productos">
-                  <td>{{producto.id}}</td>
-                  <td>{{producto.nombre}}</td>
-                  <td>{{producto.precio}}</td>
-                  <td>{{producto.stock}}</td>
-                  <td>
-                    <img :src="producto.imagen" :alt="producto.nombre" />
-                  </td>
-                  <td>{{producto.categoria}}</td>
-                  <td class="tdAcciones">
-                    <a
-                      class="button"
-                      id="button__edit"
-                      :href="'producto_update.html?id='+ producto.id"
-                      >Editar</a
-                    >
-
-                    <button
-                      type="button"
-                      class="button"
-                      id="button__delete"
-                      v-on:click="eliminar(producto.id)"
-                    >
-                      Eliminar
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-            </table> -->
-  <!--         <div class="check-container">
-            <div class="checkbox">
-                <input type="checkbox" id="checkAvanzado" value="Valor"/>
-                <label for="checkAvanzado">Monitores</label>
-            </div>
-            <div class="checkbox">
-              <input type="checkbox" id="checkAvanzado" value="Valor"/>
-              <label for="checkAvanzado">Perifericos</label>
-            </div>
-            <div class="checkbox">
-                  <input type="checkbox" id="checkAvanzado" value="Valor"/>
-                  <label for="checkAvanzado">Motherboards</label>
-              </div>
-              <div class="checkbox">
-                <input type="checkbox" id="checkAvanzado" value="Valor"/>
-                <label for="checkAvanzado">Gabinetes</label>
-            </div>
-            <div class="checkbox">
-              <input type="checkbox" id="checkAvanzado" value="Valor"/>
-              <label for="checkAvanzado">Procesadores</label>
-          </div>
-          <div class="checkbox">
-            <input type="checkbox" id="checkAvanzado" value="Valor"/>
-            <label for="checkAvanzado">Memorias</label>
-        </div>
-          </div> -->
-          <!--FILTRO POR CATEGORIA-->
-          <div id="checkboxes">
-            <div id="checkbox">
-              <input type="checkbox" role="switch" id="categoria" value="categoria">
-              <label for="categoria">Categoria</label>
->>>>>>> feature-Filtros
             </div>
           </div>
           <div class="card-container">
             <div v-for="producto in productos" class="card">
-              <img v-bind:src="producto.imagen" :alt="producto.imagen">
+              <img v-bind:src="producto.imagen" :alt="producto.imagen" />
               <h3>{{producto.nombre}}</h3>
-              <p>Precio: ${{producto.precio}}</p>
-              <p>Unidades Disponibles:{{producto.stock}}</p>
-              <p>id: {{producto.id}}</p>
+              <p>Precio:{{producto.precio}}</p>
+              <p>Stock:{{producto.stock}}</p>
+              <p>Categoria: {{producto.categoria}}</p>
               <a
-                      class="button"
-                      id="button__edit"
-                      :href="'producto_update.html?id='+ producto.id"
-                      >Editar</a
-                    >
-                    <button
-                      type="button"
-                      class="button"
-                      id="button__delete"
-                      v-on:click="eliminar(producto.id)"
-                    >
-                      Eliminar
-                    </button>
+                class="button"
+                id="button__edit"
+                :href="'producto_update.html?id='+ producto.id"
+                >Editar</a
+              >
+              <button
+                type="button"
+                class="button"
+                id="button__delete"
+                v-on:click="eliminar(producto.id)"
+              >
+                Eliminar
+              </button>
             </div>
           </div>
-          </section>
         </div>
       </div>
     </main>
